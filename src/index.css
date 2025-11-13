@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design Tokens */
+:root {
+  --background: #000;
+  --foreground: #fff;
+  --primary: #32CD32;
+  --secondary: #8B0000;
+
+  --font-sans: 'Rajdhani', sans-serif;
+  --font-display: 'Bebas Neue', sans-serif;
+}
+
+/* Dark mode (se usi class="dark" su <html>) */
+.dark {
+  --background: #000;
+  --foreground: #fff;
+  --primary: #32CD32;
+  --secondary: #8B0000;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Link styles */
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--secondary);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  background-color: var(--primary);
+  color: var(--background);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+/* Responsive helpers */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.upcoming-section {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.upcoming-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.upcoming-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: black;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .event-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.event-poster {
+  width: clamp(120px, 25vw, 350px);
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.event-info {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .event-info {
+    text-align: left;
+  }
+}
+
+.event-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-details {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.event-meta {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.event-button {
+  margin-top: 1rem;
+  padding: 0.6em 1.2em;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.event-button:hover {
+  background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .event-poster {
+    width: 120px;
+  }
+}
