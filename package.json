@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "npm install vite @vitejs/plugin-react"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
@@ -16,10 +17,10 @@
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.0",
     "@sanity/client": "^7.12.1",
+    "@vitejs/plugin-react": "^5.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.5",
-    "@vitejs/plugin-react": "^5.1.0",
     "vite": "^7.2.2"
   },
   "devDependencies": {
