@@ -1,4 +1,40 @@
 {
+<<<<<<< HEAD
+  "name": "grooving-cms",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/vision": "^4.15.0",
+    "react": "^19.1",
+    "react-dom": "^19.1",
+    "sanity": "^4.15.0",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^5.0.2",
+    "@types/react": "^19.1",
+    "eslint": "^9.28",
+    "prettier": "^3.5",
+    "typescript": "^5.8"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+=======
   "name": "grooving-site",
   "private": true,
   "version": "0.0.0",
@@ -38,5 +74,6 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.3",
     "vite": "^7.2.2"
+>>>>>>> b675f025ad7c0b0c4e03e8c0a3d3b0b95adfc0dd
   }
 }
